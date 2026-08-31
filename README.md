@@ -1,38 +1,39 @@
-# 🤖 AI Code Reviewer CLI
+#  AI Engineering Multi-Tool Suite
 
-A lightweight, automated Python command-line interface (CLI) tool that performs static code reviews, flags potential bugs, and suggests performance optimizations using the Google Gemini API.
-
----
-
-## 💡 Overview
-
-Stepping through code line-by-line to find edge cases, anti-patterns, or subtle bugs can be time-consuming. **AI Code Reviewer CLI** reads local Python files, passes the contents securely to Google's `gemini-3.6-flash` model, and returns a structured markdown report right in your terminal.
-
-### Key Features
-* **Automated Static Analysis:** Detects common runtime errors, unhandled edge cases, and PEP 8 style issues.
-* **Quality Scoring:** Rates code readability and efficiency on a 1–10 scale with clear justifications.
-* **Secure Credential Management:** Utilizes `python-dotenv` to keep private API keys isolated from source code.
-* **Defensive Exception Handling:** Built-in safeguards for missing local files, network timeouts, and invalid CLI arguments.
+An end-to-end Python application suite combining CLI tools, REST APIs, and an interactive Streamlit frontend. Powered by **Google Gemini API**, **FastAPI**, **Pandas**, and **PyPDF**.
 
 ---
 
-## 🛠️ Tech Stack
+##  Key Features
 
-* **Language:** Python 3.10+
-* **AI Model:** Google Gemini API (`google-genai` SDK)
-* **Environment Management:** `python-dotenv`
+* ** AI Code Reviewer (`reviewer.py` & `main.py`)**: Analyzes Python code snippets, identifies bugs, suggests PEP 8 style fixes, and assigns quality scores. Available as both a CLI tool with Markdown export and a REST API.
+* ** CSV Data Summarizer (`data_summarizer.py`)**: Uses Pandas to extract statistical overviews of tabular datasets and generates AI executive summaries.
+* ** Document Query Engine (`doc_query.py`)**: Parses PDF and text files using `pypdf` to answer questions directly against local context.
+* ** Interactive Web Dashboard (`app.py`)**: A Streamlit frontend unifying the suite into a multi-tab web application.
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Tech Stack & Dependencies
 
-### Prerequisites
-* Python 3.10 or higher installed.
-* A Gemini API key from [Google AI Studio](https://aistudio.google.com/).
+* **Language**: Python 3.10+
+* **AI Model**: Google Gemini API (`google-genai`)
+* **Backend Framework**: FastAPI & Uvicorn
+* **Data Processing**: Pandas, PyPDF
+* **Frontend**: Streamlit
+* **Environment Management**: `python-dotenv`
 
-### Installation
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/ajayasauden/ai-code-reviewer.git](https://github.com/ajayasauden/ai-code-reviewer.git)
-   cd ai-code-reviewer
+##  Quickstart Guide
+
+### 1. Clone & Set Up Environment
+```bash
+git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+cd YOUR_REPO_NAME
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
